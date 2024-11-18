@@ -1,0 +1,37 @@
+@import '../../styles/variables/colors';
+
+.banner {
+  height: 75vh;
+  width: 100%;
+  background-image: url('../../assets/img/banner.png');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  h2 {
+    color: $text-color;
+    width: 20%;
+    margin-left: 12%;
+  }
+}
+
+.contentCard {
+  height: 80vh;
+  padding: 1% 8%;
+
+  h3 {
+    color: $secondary-color;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}

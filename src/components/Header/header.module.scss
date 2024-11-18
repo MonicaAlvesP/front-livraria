@@ -1,0 +1,76 @@
+@import '../../styles/variables/colors';
+
+header {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $primary-color;
+}
+
+.logoIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    height: 8vh;
+    font-weight: 700;
+  }
+
+  h1 {
+    color: $text-color;
+  }
+}
+
+.navegation {
+  width: 30%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      &:hover {
+        color: $link-hover;
+      }
+    }
+  }
+}
+
+.searchBar {
+  border: solid 1px $text-color;
+  padding: 6px 15px;
+  border-radius: 20px;
+
+  input {
+    width: 85%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $text-color;
+
+    &::placeholder {
+      color: $text-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: $text-color;
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+}
