@@ -20,8 +20,8 @@ export const Header = () => {
         <nav className={navegation}>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/queroDoar">Quero Doar</Link></li>
             <li><Link to="/livrosDoados">Livros Doados</Link></li>
+            <li><Link to="/queroDoar">Quero Doar</Link></li>
           </ul>
         </nav>
         <section className={searchBar}>

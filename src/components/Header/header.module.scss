@@ -3,26 +3,27 @@
 header {
   height: 15vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2%;
   align-items: center;
   background: $primary-color;
 }
 
 .logoIcon {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-
-  img {
-    height: 8vh;
-    font-weight: 700;
-  }
+  align-items: flex-end;
+  gap: 0.5rem;
 
   h1 {
     color: $text-color;
+    font-size: 1.8rem;
+  }
+
+  img {
+    width: 8vh;
   }
 }
+
 
 .navegation {
   width: 30%;
@@ -38,27 +39,31 @@ header {
     a {
       text-decoration: none;
       color: $text-color;
+
       &:hover {
         color: $link-hover;
+        transition: color 0.3s ease;
+        text-shadow: 0 0 5px $link-hover;
       }
     }
   }
 }
 
 .searchBar {
+  display: flex;
+  justify-content: space-between;
   border: solid 1px $text-color;
-  padding: 6px 15px;
-  border-radius: 20px;
+  padding: 8px 12px;
+  border-radius: 12px;
 
   input {
-    width: 85%;
     background: transparent;
     border: none;
     outline: none;
     color: $text-color;
 
     &::placeholder {
-      color: $text-color;
+      color: #ffffffb1;
     }
 
     &:focus {
