@@ -1,21 +1,24 @@
 import Livro from '../../assets/img/book.png'
+import { mainContent, bookInfo, registrationSection, registrationForm, formInput } from './queroDoar.module.scss'
 
 export const QueroDoar = () => {
   return (
-    <>
+    <main className={mainContent}>
       <h2>Por favor, preencha o formulário com suas informações e as informações do Livro</h2>
-      <section>
-        <img src={Livro} alt="" />
-        <h3>Informações do Livro</h3>
-      </section>
-      <section>
-        <form>
-          <input type="text" name="" id="" placeholder='Título' required />
-          <input type="text" name="" id="" placeholder='Categoria' required />
-          <input type="text" name="" id="" placeholder='Autor' required />
-          <input type="text" name="" id="" placeholder='Link da Imagem' required />
+      <section className={registrationSection}>
+        <section className={bookInfo}>
+          <img src={Livro} alt="Imagem de um livro" />
+          <h3>Informações do Livro</h3>
+        </section>
+
+        <form className={registrationForm}>
+          <input type="text" name="titulo" id="titulo" placeholder='Título' required className={formInput} />
+          <input type="text" name="categoria" id="categoria" placeholder='Categoria' required className={formInput} />
+          <input type="text" name="autor" id="autor" placeholder='Autor' required className={formInput} />
+          <input type="text" name="linkImagem" id="linkImagem" placeholder='Link da Imagem' required className={formInput} />
         </form>
+        <button>Doar</button>
       </section>
-    </>
+    </main>
   )
 }

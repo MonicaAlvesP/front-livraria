@@ -1,0 +1,70 @@
+@import '../../styles/variables/colors';
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+
+  h2 {
+    font-weight: 400;
+  }
+}
+
+.registrationSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px $secondary-color;
+  border-radius: 5px;
+  padding: 20px;
+  width: 30%;
+  margin-top: 30px;
+
+  button {
+    padding: 10px 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+.bookInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  gap: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $secondary-color;
+  }
+}
+
+.registrationForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.formInput {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border: solid 1px $secondary-color;
+  border-radius: 15px;
+  width: 100%;
+}
