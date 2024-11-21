@@ -1,19 +1,17 @@
 @import '../../GlobalStyle/colors';
+@import '../../GlobalStyle/mixins';
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex(column, center, center);
+  @include borderRadius(25px);
+  @include boxShadow;
   background-color: $bg-card;
   margin: 1rem;
   width: 100%;
   height: 40vh;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   img {
-    height: 12vh;
+    height: 10vh;
   }
 
   p {
@@ -26,18 +24,5 @@
 @media (max-width: 768px) {
   .card {
     width: 100%;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1280px) {
-  .card {
-    width: 80%;
-    height: 30vh;
-    align-items: center;
-
-    img {
-      height: 10vh;
-      margin-top: 5rem;
-    }
   }
 }

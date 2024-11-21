@@ -4,16 +4,16 @@ import Reading from '../../assets/img/reading.png';
 import Balance from '../../assets/img/balance.png';
 import Community from '../../assets/img/community.png';
 import Transform from '../../assets/img/transform.png';
-import { banner, contentCard, cards } from './inicio.module.scss'
+import { banner, titleBanner, contentCard, cards } from './inicio.module.scss'
 
 export const Inicio = () => {
   return (
-    <>
+    <main>
       <section className={banner}>
-        <h2>VENHA FAZER PARTE DA MAIOR REDE DE DOAÇÃO</h2>
+        <h2 className={titleBanner}>VENHA FAZER PARTE DA MAIOR REDE DE DOAÇÃO</h2>
       </section>
       <section className={contentCard}>
-      <h3>Por que devo doar?</h3>
+        <h3>Por que devo doar?</h3>
         <section className={cards}>
           <Card
             image={Community}
@@ -33,6 +33,6 @@ export const Inicio = () => {
           />
         </section>
       </section>
-    </>
+    </main>
   );
 };

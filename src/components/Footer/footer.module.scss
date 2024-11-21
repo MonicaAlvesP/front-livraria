@@ -1,26 +1,21 @@
 @import '../../GlobalStyle/colors';
+@import '../../GlobalStyle/mixins';
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  @include displayFlex(column, center, center);
   background-color: $secondary-color;
 }
 
 .socialIcons {
   width: 90%;
   height: 15vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include displayFlex(row, space-between, center);
 
   color: $text-color;
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
+  @include displayFlex(row, space-between, center);
   width: 15%;
 
   a {
@@ -35,9 +30,7 @@ footer {
 }
 
 .license {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include displayFlex(row, center, center);
   width: 100%;
   height: 8vh;
   background-color: $bg-black;
@@ -46,9 +39,7 @@ footer {
 
 @media (max-width: 768px) {
   .socialIcons {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include displayFlex(column, center, center);
   }
 
   .icons {

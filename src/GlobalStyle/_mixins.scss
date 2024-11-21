@@ -1,0 +1,16 @@
+@import './colors';
+
+@mixin displayFlex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin borderRadius($radius: 25px) {
+  border-radius: $radius;
+}
+
+@mixin boxShadow($color: $secondary-color) {
+  box-shadow: 0 0 10px $secondary-color;
+}
