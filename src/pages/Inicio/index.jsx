@@ -16,19 +16,19 @@ export const Inicio = () => {
         <h3>Por que devo doar?</h3>
         <section className={cards}>
           <Card
-            image={Community}
+            image={Community} alt="Comunidade"
             text=" Oferece livros a quem não tem acesso, ajudando a reduzir a exclusão social."
           />
           <Card
-            image={Reading}
+            image={Reading} alt="Leitura"
             text="Estimula o hábito da leitura e o aprendizado contínuo."
           />
           <Card
-            image={Transform}
+            image={Transform} alt="Transformação"
             text="Fornece conhecimento e inspiração, permitindo que indivíduos transformem suas vidas."
           />
           <Card
-            image={Balance}
+            image={Balance} alt="Equilíbrio"
             text="Garante que todos, independentemente de sua condição, tenham oportunidades de aprendizado."
           />
         </section>

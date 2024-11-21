@@ -8,11 +8,11 @@ export const Footer = () => {
       <section className={socialIcons}>
         <p>4002 - 8922</p>
         <section className={icons}>
-          <a href=""><FaFacebook /></a>
-          <a href=""><FaTwitter /></a>
-          <a href=""><FaYoutube /></a>
-          <a href=""><FaLinkedin /></a>
-          <a href=""><FaInstagram /></a>
+          <a href="https://www.facebook.com/vainaweb" target='_blank'><FaFacebook /></a>
+          <a href="https://x.com/vainaweb" target='_blank'><FaTwitter /></a>
+          <a href="https://www.youtube.com/@VaiNaWeb" target='_blank'><FaYoutube /></a>
+          <a href="https://www.linkedin.com/company/vainaweb/posts/?feedView=all" target='_blank'><FaLinkedin /></a>
+          <a href="https://www.instagram.com/vainaweb/" target='_blank'><FaInstagram /></a>
         </section>
       </section>
 
