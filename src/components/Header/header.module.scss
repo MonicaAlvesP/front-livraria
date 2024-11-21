@@ -1,81 +1,152 @@
-@import '../../styles/variables/colors';
+@import '../../GlobalStyle/colors';
 
 header {
-  height: 15vh;
   display: flex;
   justify-content: space-between;
-  padding: 0 2%;
   align-items: center;
+  height: 18vh;
+  padding: 1rem;
   background: $primary-color;
-}
 
-.logoIcon {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-
-  h1 {
-    color: $text-color;
-    font-size: 1.8rem;
+  @media (min-width: 800px) and (max-width: 1280px) {
+    width: 100%;
+    height: 10vh;
   }
 
-  img {
-    width: 8vh;
-  }
-}
-
-
-.navegation {
-  width: 30%;
-
-  ul {
+  .logoIcon {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 20vw;
 
-    li {
-      list-style: none;
+    img {
+      width: 20%;
+      padding-bottom: 1rem;
     }
 
-    a {
-      text-decoration: none;
+    h1 {
       color: $text-color;
+    }
 
-      &:hover {
-        color: $link-hover;
-        transition: color 0.3s ease;
-        text-shadow: 0 0 5px $link-hover;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin: 2rem;
+    }
+
+    @media (min-width: 800px) and (max-width: 1280px) {
+      width: 25%;
+
+      h1 {
+        font-size: 1rem;
       }
     }
   }
-}
 
-.searchBar {
-  display: flex;
-  justify-content: space-between;
-  border: solid 1px $text-color;
-  padding: 8px 12px;
-  border-radius: 12px;
-
-  input {
-    background: transparent;
+  .toggleButton {
+    background: none;
     border: none;
-    outline: none;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    display: none;
     color: $text-color;
+  }
 
-    &::placeholder {
-      color: #ffffffb1;
+  .navegation {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 30vw;
     }
 
-    &:focus {
-      outline: none;
+    li {
+      a {
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+          text-decoration: none;
+          color: $link-hover;
+          text-shadow: 1px 1px 1px $link-hover;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      background: $primary-color;
+      padding: 1rem;
+
+      ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+
+        li {
+          padding: 1rem;
+          text-align: center;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+
+    @media (min-width: 800px) and (max-width: 1280px) {
+      ul {
+        width: 35vw;
+      }
     }
   }
 
-  button {
-    background: transparent;
-    border: none;
-    color: $text-color;
-    cursor: pointer;
-    margin-left: 0.5rem;
+  .searchBar {
+    display: flex;
+    justify-content: space-between;
+    width: 18vw;
+    border: solid 2px $text-color;
+    border-radius: 20px;
+
+    input {
+      border: none;
+      width: 100%;
+      background: transparent;
+      color: $text-color;
+      padding: 0.5rem;
+      outline: none;
+
+      &::placeholder {
+        color: #d5d3d3;
+      }
+    }
+
+    button {
+      background: transparent;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .toggleButton {
+      display: block;
+    }
+
+    .searchBar {
+      display: none;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 1280px) {
+    .searchBar {
+      width: 25vw;
+    }
   }
 }

@@ -1,17 +1,19 @@
 import BookCover from '../../assets/img/book-cover.png';
+import { ListBook } from '../../components/ListBook';
+import { mainContent, list } from './livrosDoados.module.scss';
 
 export const LivrosDoados = () => {
   return (
-    <>
+    <main className={mainContent}>
       <h1>Livros Doados</h1>
-      <section>
-        <figure>
-          <img src={BookCover} alt="" />
-          <figcaption>O protagonista</figcaption>
-          <p>Susanne Andrade</p>
-          <span>Ficção</span>
-        </figure>
+      <section className={list}>
+        <ListBook
+          image={BookCover}
+          name="O protagonista"
+          autor="Susanne Andrade"
+          category="Ficção"
+        />
       </section>
-    </>
+    </main>
   )
 }

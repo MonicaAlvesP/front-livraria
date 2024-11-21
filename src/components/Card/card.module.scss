@@ -1,4 +1,4 @@
-@import '../../styles/variables/colors';
+@import '../../GlobalStyle/colors';
 
 .card {
   display: flex;
@@ -20,5 +20,24 @@
     width: 75%;
     height: 15vh;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1280px) {
+  .card {
+    width: 80%;
+    height: 30vh;
+    align-items: center;
+
+    img {
+      height: 10vh;
+      margin-top: 5rem;
+    }
   }
 }

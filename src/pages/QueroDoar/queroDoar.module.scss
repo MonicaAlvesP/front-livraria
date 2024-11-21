@@ -1,4 +1,4 @@
-@import '../../styles/variables/colors';
+@import '../../GlobalStyle/colors';
 
 .mainContent {
   display: flex;
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 5px $secondary-color;
-  border-radius: 5px;
+  border-radius: 25px;
   padding: 20px;
   width: 30%;
   margin-top: 30px;
@@ -67,4 +67,34 @@
   border: solid 1px $secondary-color;
   border-radius: 15px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    height: 100vh;
+
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .bookInfo {
+    height: 10vh;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .registrationSection {
+    width: 80%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1280px){
+  .registrationSection {
+    width: 60%;
+  }
 }

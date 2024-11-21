@@ -1,4 +1,4 @@
-@import '../../styles/variables/colors';
+@import '../../GlobalStyle/colors';
 
 footer {
   display: flex;
@@ -42,4 +42,22 @@ footer {
   height: 8vh;
   background-color: $bg-black;
   color: $text-color;
+}
+
+@media (max-width: 768px) {
+  .socialIcons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icons {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .license {
+    height: 10vh;
+    text-align: center;
+  }
 }

@@ -1,4 +1,4 @@
-@import '../../styles/variables/colors';
+@import '../../GlobalStyle/colors';
 
 .banner {
   height: 80vh;
@@ -35,4 +35,68 @@
   display: flex;
   text-align: center;
   margin: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+
+    h2 {
+      width: 85%;
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 2px $secondary-color;
+    }
+  }
+
+  .contentCard {
+    height: 100%;
+    width: 80%;
+
+    h3 {
+      font-size: 2rem;
+      width: 100%;
+      font-weight: 400;
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1280px){
+  .banner {
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+
+    h2 {
+      width: 85%;
+      font-size: 1.8rem;
+      text-shadow: 2px 2px 2px $secondary-color;
+    }
+  }
+
+  .contentCard {
+    height: 100%;
+    width: 80%;
+    text-align: center;
+
+    h3 {
+      font-size: 2rem;
+      width: 100%;
+      font-weight: 400;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
