@@ -1,5 +1,5 @@
-@import '../../GlobalStyle/colors';
-@import '../../GlobalStyle/mixins';
+@import "../../globalStyle/colors";
+@import "../../globalStyle/mixins";
 
 .banner {
   width: 100%;
@@ -7,15 +7,14 @@
   background-image: url("../../assets/img/banner.png");
   background-size: cover;
   background-position: center;
-}
+  display: flex;
+  align-items: center;
 
-.titleBanner {
-  position: absolute;
-  top: 45%;
-  left: 6%;
-  width: 20%;
-  color: white;
-  text-shadow: 2px 2px 4px #000;
+  h2 {
+    width: 22%;
+    color: $text-color;
+    margin-left: 8%;
+  }
 }
 
 

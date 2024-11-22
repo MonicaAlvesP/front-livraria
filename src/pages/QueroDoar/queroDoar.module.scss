@@ -1,5 +1,5 @@
-@import '../../GlobalStyle/colors';
-@import '../../GlobalStyle/mixins';
+@import '../../globalStyle/colors';
+@import '../../globalStyle/mixins';
 
 .mainContent {
   @include displayFlex(column, center, center);

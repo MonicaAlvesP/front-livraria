@@ -1,5 +1,5 @@
-@import '../../GlobalStyle/colors';
-@import '../../GlobalStyle/mixins';
+@import '../../globalStyle/colors';
+@import '../../globalStyle/mixins';
 
 footer {
   @include displayFlex(column, center, center);
