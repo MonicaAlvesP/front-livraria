@@ -1,5 +1,5 @@
-@import '../../globalStyle/colors';
-@import '../../globalStyle/mixins';
+@import '../../GlobalStyle/colors';
+@import '../../GlobalStyle/mixins';
 
 .card {
   @include displayFlex(column, center, center);
