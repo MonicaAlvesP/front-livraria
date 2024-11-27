@@ -4,12 +4,12 @@ import { containerBook } from './listBook.module.scss';
 
 export const ListBook = ({ image, name, autor, category }) => {
   return (
-    <section className={containerBook}>
+    <div className={containerBook}>
       <img src={image} />
       <h3>{name}</h3>
       <h4>{autor}</h4>
       <span>{category}</span>
-    </section>
+    </div>
   )
 }
 

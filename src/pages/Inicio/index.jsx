@@ -14,7 +14,7 @@ export const Inicio = () => {
       </section>
       <section className={contentCard}>
         <h3>Por que devo doar?</h3>
-        <section className={cards}>
+        <div className={cards}>
           <Card
             image={Community} alt="Comunidade"
             text=" Oferece livros a quem não tem acesso, ajudando a reduzir a exclusão social."
@@ -31,7 +31,7 @@ export const Inicio = () => {
             image={Balance} alt="Equilíbrio"
             text="Garante que todos, independentemente de sua condição, tenham oportunidades de aprendizado."
           />
-        </section>
+        </div>
       </section>
     </main>
   );

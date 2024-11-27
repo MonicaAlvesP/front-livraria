@@ -7,7 +7,7 @@ import { QueroDoar } from '../../pages/QueroDoar';
 import { LivrosDoados } from '../../pages/LivrosDoados';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import styles from './header.module.scss'; // Importando os estilos como um objeto
+import styles from './header.module.scss';
 import { useState } from "react";
 
 export const Header = () => {
