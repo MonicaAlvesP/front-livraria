@@ -6,12 +6,12 @@
   @include borderRadius(25px);
   @include boxShadow;
   text-align: center;
-  padding: 2rem;
   width: 18vw;
   height: 40vh;
+  margin: 1rem;
 
   img {
-    width: 100%;
+    width: 60%;
     padding: 1rem;
   }
 
@@ -27,6 +27,6 @@
 
 @media (max-width: 768px) {
   .containerBook {
-    width: 50%;
+    width: 75vw;
   }
 }
