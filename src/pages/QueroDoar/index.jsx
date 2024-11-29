@@ -6,12 +6,11 @@ export const QueroDoar = () => {
     <main className={mainContent}>
       <h2>Por favor, preencha o formulário com suas informações e as informações do Livro</h2>
       <section className={registrationSection}>
-        <div className={bookInfo}>
-          <img src={Livro} alt="Imagem de um livro" />
-          <h3>Informações do Livro</h3>
-        </div>
-
         <form className={registrationForm}>
+          <div className={bookInfo}>
+            <img src={Livro} alt="Imagem de um livro" />
+            <h3>Informações do Livro</h3>
+          </div>
           <input type="text" name="titulo" id="titulo" placeholder='Título' required className={formInput} />
           <input type="text" name="categoria" id="categoria" placeholder='Categoria' required className={formInput} />
           <input type="text" name="autor" id="autor" placeholder='Autor' required className={formInput} />

@@ -61,17 +61,17 @@
 
 @media (max-width: 768px) {
   .mainContent {
-    height: 100vh;
+    height: 70vh;
 
     h2 {
-      font-size: 1.5rem;
       text-align: center;
-      margin-bottom: 1rem;
+      width: 90%;
     }
   }
 
   .bookInfo {
     height: 10vh;
+    width: 100%;
 
     h3 {
       font-size: 1rem;
@@ -79,6 +79,10 @@
   }
 
   .registrationSection {
-    width: 80%;
+    width: 90%;
+  }
+
+  .formInput {
+    width: 100%;
   }
 }
