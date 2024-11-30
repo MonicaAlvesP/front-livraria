@@ -2,13 +2,12 @@
 import PropTypes from 'prop-types';
 import { containerBook } from './listBook.module.scss';
 
-export const ListBook = ({ image, name, autor, category }) => {
+export const ListBook = ({ image, name, autor }) => {
   return (
     <div className={containerBook}>
       <img src={image} />
       <h3>{name}</h3>
       <h4>{autor}</h4>
-      <span>{category}</span>
     </div>
   )
 }

@@ -3,8 +3,7 @@
 
 .containerBook {
   @include displayFlex(column, center, center);
-  @include borderRadius(25px);
-  @include boxShadow;
+  background-color: aliceblue;
   text-align: center;
   width: 18vw;
   height: 40vh;
