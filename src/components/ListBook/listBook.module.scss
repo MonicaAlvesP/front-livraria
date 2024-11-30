@@ -26,6 +26,19 @@
 
 @media (max-width: 768px) {
   .containerBook {
-    width: 75vw;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 0.8rem;
+    }
+
+    h4 {
+      font-size: 0.5rem;
+    }
   }
 }
