@@ -1,0 +1,147 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: $bg-body;
+}
+
+.congratulations {
+  width: 45%;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $secondary-color;
+    line-height: 1.5;
+  }
+}
+
+.registerSection {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  
+  h4 {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.formRegister {
+  background-color: $bg-card;
+  padding: 1rem;
+  border-radius: 15px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 10px;
+      background-color: $secondary-color;
+      color: $text-color;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+.formInput {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border: solid 1px $secondary-color;
+  border-radius: 15px;
+  width: 100%;
+
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: solid 1px $primary-color;
+  }
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: solid 1px $primary-color;
+  }
+}
+
+@include breakpoint(small) {
+  .mainContent {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .congratulations {
+    width: 100%;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .registerSection {
+    width: 100%;
+  }
+
+  .formRegister {
+    height: 50vh;
+    width: 90%;
+  }
+}
+
+@include breakpoint(large) {
+  .mainContent {
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .congratulations {
+    width: 100%;
+  }
+
+  .registerSection {
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .formRegister {
+    width: 90%;
+  }
+}

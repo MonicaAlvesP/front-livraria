@@ -1,5 +1,5 @@
-@import '../../GlobalStyle/colors';
-@import '../../GlobalStyle/mixins';
+@import '../abstract/variables';
+@import '../abstract/mixins';
 
 footer {
   @include displayFlex(column, center, center);
@@ -37,18 +37,38 @@ footer {
   color: $text-color;
 }
 
-@media (max-width: 768px) {
+@include breakpoint (small) {
   .socialIcons {
-    @include displayFlex(column, center, center);
+    height: 8vh;
   }
 
   .icons {
-    width: 50%;
-    margin-top: 1rem;
+    width: 40%;
   }
 
   .license {
-    height: 10vh;
-    text-align: center;
+    height: 5vh;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@include breakpoint (large) {
+  .socialIcons {
+    height: 8vh;
+  }
+
+  .icons {
+    width: 30%;
+  }
+
+  .license {
+    height: 6vh;
+
+    p {
+      font-size: 1rem;
+    }
   }
 }

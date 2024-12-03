@@ -1,18 +1,12 @@
-@import '../../GlobalStyle/colors';
-@import '../../GlobalStyle/mixins';
+@import '../abstract/variables';
+@import '../abstract/mixins';
 
 header {
   @include displayFlex(row, space-between, center);
-  height: 18vh;
+  height: 15vh;
   width: 100%;
   padding: 0 2rem;
   background: $primary-color;
-
-  @media (max-width: 768px) {
-    height: 10vh;
-    padding: 1rem;
-    @include displayFlex(row-reverse, space-between, center);
-  }
 }
 
 .logoIcon {
@@ -27,20 +21,6 @@ header {
 
   h1 {
     color: $text-color;
-  }
-
-  @media (max-width: 768px) {
-    width: 68%;
-    height: 8vh;
-    padding-top: 0.5rem;
-
-    img {
-      width: 18%;
-    }
-
-    h1 {
-      font-size: 1rem;
-    }
   }
 }
 
@@ -67,27 +47,6 @@ header {
       &:hover {
         color: $link-hover;
         text-shadow: 1px 1px 1px $link-hover;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: $primary-color;
-    padding: 1rem;
-
-    ul {
-      flex-direction: column;
-      width: 100%;
-      gap: 0;
-
-      li {
-        padding: 1rem;
-        text-align: center;
       }
     }
   }
@@ -126,9 +85,77 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@include breakpoint(small) {
+  header {
+    @include displayFlex(row-reverse, space-between, center);
+    height: 8ch;
+    padding: 0 1rem;
+  }
+
+  .logoIcon {
+    width: 68%;
+    height: 8vh;
+    padding-top: 0.5rem;
+
+    img {
+      width: 18%;
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  .navegation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: $primary-color;
+    margin: 1rem 0;
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0;
+      
+      li {
+        padding: 1rem;
+        text-align: center;
+      }
+    }
+  }
+
   .toggleButton {
     display: block;
+  }
+
+  .searchBar {
+    display: none;
+  }
+}
+
+@include breakpoint(large) {
+  header {
+    height: 10vh;
+  }
+
+  .logoIcon {
+    img {
+      width: 20%;
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
+
+  .navegation {
+    ul {
+      width: 40vw;
+    }
   }
 
   .searchBar {

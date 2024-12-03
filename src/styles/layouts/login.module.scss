@@ -1,0 +1,62 @@
+@import "../abstract/variables";
+@import "../abstract/mixins";
+
+.loginPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+}
+
+.loginSection {
+  width: 40%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.formLogin {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    outline: none;
+  }
+}
+
+.buttonSubmit {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  background-color: $secondary-color;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.loginLinks {
+  margin-top: 2rem;
+
+  a {
+    margin-right: 1%;
+
+    &:visited {
+      color: darkcyan;
+    }
+  }
+}

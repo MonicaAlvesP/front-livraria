@@ -1,0 +1,103 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+
+.banner {
+  height: 80vh;
+  background-image: url("../../assets/img/banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 6%;
+
+  h2 {
+    width: 22%;
+    color: $text-color;
+    text-shadow: 2px 2px 2px $secondary-color;
+    font-size: 1.5rem;
+    z-index: 1;
+  }
+}
+
+
+.contentCard {
+  @include displayFlex(column, center);
+  height: 70vh;
+  background-color: $bg-body;
+
+  h3 {
+    font-size: 2rem;
+    color: $secondary-color;
+    padding: 2rem;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@include breakpoint(small) {
+  .banner {
+    height: 50vh;
+    padding: 0;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contentCard {
+    height: 60vh;
+    margin: 1rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .banner {
+    height: 50vh;
+
+    h2 {
+      width: 95%;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  .contentCard {
+    height: 100%;
+    padding: 2rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

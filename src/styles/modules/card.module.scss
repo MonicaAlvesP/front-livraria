@@ -1,0 +1,54 @@
+@import '../abstract/variables';
+@import '../abstract/mixins';
+
+.card {
+  @include displayFlex(column, center, center);
+  border-radius: $borderRadius;
+  box-shadow: $box-shadow;
+  background-color: $bg-card;
+  width: 100%;
+  height: 40vh;
+
+  img {
+    height: 10vh;
+  }
+
+  p {
+    width: 75%;
+    height: 15vh;
+    margin-top: 1rem;
+  }
+}
+
+@include breakpoint(small) {
+  .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 75%;
+    height: 35vh;
+    padding: 1rem;
+
+    img {
+      height: 15vh;
+    }
+
+    p {
+      width: 100%;
+      height: 10vh;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .card {
+    width: 100%;
+    height: 25vh;
+    align-items: center;
+    
+
+    img {
+      height: 8vh;
+      margin-top: 3rem;
+    }
+  }
+}
