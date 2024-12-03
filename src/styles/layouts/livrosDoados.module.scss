@@ -1,4 +1,5 @@
-@import '../../GlobalStyle/colors';
+@import '../abstract/variables';
+@import '../abstract/mixins';
 
 .mainContent {
   display: flex;
@@ -6,6 +7,7 @@
   align-items: center;
   width: 100%;
   padding: 2rem;
+  background-color: $bg-body;
 
   h1 {
     font-size: 2rem;
@@ -16,19 +18,18 @@
 
 .listCategory {
   width: 100%;
-  padding: 1rem;
   margin: 1rem;
-  box-shadow: 0 8px 10px -8px $secondary-color;
+  box-shadow: $shadow-botton;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
+
+  @include breakpoint(large) {
+    width: 80%;
+  }
 }
 
 .list {
   display: flex;
-}
-
-
-@media (max-width: 768px) {
-  .list {
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
-  }
 }

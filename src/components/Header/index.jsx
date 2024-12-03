@@ -3,11 +3,12 @@ import Logo from "../../assets/img/logo.png";
 import { FaSearch } from "react-icons/fa";
 
 import { Inicio } from '../../pages/Inicio';
+// import {Login} from '../../pages/login';
 import { QueroDoar } from '../../pages/QueroDoar';
 import { LivrosDoados } from '../../pages/LivrosDoados';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import styles from './header.module.scss';
+import s from '../../styles/modules/header.module.scss';
 import { useState } from "react";
 
 export const Header = () => {
@@ -19,22 +20,22 @@ export const Header = () => {
 
   return (
     <BrowserRouter>
-      <header className={styles.header}>
-        <button className={styles.toggleButton} onClick={toggleMenu}>
+      <header className={s.header}>
+        <button className={s.toggleButton} onClick={toggleMenu}>
           ☰
         </button>
-        <section className={styles.logoIcon}>
+        <section className={s.logoIcon}>
           <img src={Logo} alt="logotipo da livraria" />
           <h1>Livros Vai na Web</h1>
         </section>
-        <nav className={`${styles.navegation} ${menuOpen ? styles.active : ''}`}>
+        <nav className={`${s.navegation} ${menuOpen ? s.active : ''}`}>
           <ul>
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
             <li><Link to="/livrosDoados" onClick={() => setMenuOpen(false)}>Livros Doados</Link></li>
             <li><Link to="/queroDoar" onClick={() => setMenuOpen(false)}>Quero Doar</Link></li>
           </ul>
         </nav>
-        <section className={styles.searchBar}>
+        <section className={s.searchBar}>
           <input
             type="search"
             name="search"

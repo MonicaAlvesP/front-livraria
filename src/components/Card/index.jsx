@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { card } from './card.module.scss'
+import s from '../../styles/modules/card.module.scss';
 
 export const Card = ({ image, text }) => {
   return (
-    <section className={card}>
+    <section className={s.card}>
       <img src={image} alt="Card image" />
       <p>{text}</p>
     </section>

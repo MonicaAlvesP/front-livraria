@@ -1,20 +1,19 @@
-import { Card } from '../../components/Card';
-
-import Reading from '../../assets/img/reading.png';
-import Balance from '../../assets/img/balance.png';
+import s from '../../styles/layouts/inicio.module.scss';
 import Community from '../../assets/img/community.png';
+import Reading from '../../assets/img/reading.png';
 import Transform from '../../assets/img/transform.png';
-import { banner, contentCard, cards } from './inicio.module.scss'
+import Balance from '../../assets/img/balance.png';
+import { Card } from '../../components/Card';
 
 export const Inicio = () => {
   return (
     <main>
-      <section className={banner}>
+      <section className={s.banner}>
         <h2>VENHA FAZER PARTE DA MAIOR REDE DE DOAÇÃO</h2>
       </section>
-      <section className={contentCard}>
+      <section className={s.contentCard}>
         <h3>Por que devo doar?</h3>
-        <div className={cards}>
+        <div className={s.cards}>
           <Card
             image={Community} alt="Comunidade"
             text=" Oferece livros a quem não tem acesso, ajudando a reduzir a exclusão social."

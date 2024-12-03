@@ -1,15 +1,15 @@
 import BookCover from '../../assets/img/book-cover.png';
 import { ListBook } from '../../components/ListBook';
-import { mainContent, listCategory, list } from './livrosDoados.module.scss';
+import s from '../../styles/layouts/livrosDoados.module.scss';
 
 export const LivrosDoados = () => {
 
   return (
-    <main className={mainContent}>
+    <main className={s.mainContent}>
       <h1>Livros Doados</h1>
-      <section className={listCategory}>
+      <section className={s.listCategory}>
         <h5>Ficção</h5>
-        <div className={list}>
+        <div className={s.list}>
           <ListBook
             image={BookCover}
             name="O protagonista"
@@ -23,9 +23,9 @@ export const LivrosDoados = () => {
         </div>
       </section>
 
-      <section className={listCategory}>
+      <section className={s.listCategory}>
         <h5>Romance</h5>
-        <div className={list}>
+        <div className={s.list}>
           <ListBook
             image={BookCover}
             name="O protagonista"
@@ -39,9 +39,9 @@ export const LivrosDoados = () => {
         </div>
       </section>
 
-      <section className={listCategory}>
+      <section className={s.listCategory}>
         <h5>Autoajuda</h5>
-        <div className={list}>
+        <div className={s.list}>
           <ListBook
             image={BookCover}
             name="O protagonista"
@@ -55,9 +55,9 @@ export const LivrosDoados = () => {
         </div>
       </section>
 
-      <section className={listCategory}>
+      <section className={s.listCategory}>
         <h5>Infantil</h5>
-        <div className={list}>
+        <div className={s.list}>
           <ListBook
             image={BookCover}
             name="O protagonista"
