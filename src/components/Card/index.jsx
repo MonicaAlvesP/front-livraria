@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import s from '../../styles/modules/card.module.scss';
 
-export const Card = ({ image, text }) => {
+export const Card = ({ image, alt, text }) => {
   return (
     <section className={s.card}>
-      <img src={image} alt="Card image" />
+      <img src={image} alt={alt} />
       <p>{text}</p>
     </section>
   );
@@ -12,5 +12,6 @@ export const Card = ({ image, text }) => {
 
 Card.propTypes = {
   image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };

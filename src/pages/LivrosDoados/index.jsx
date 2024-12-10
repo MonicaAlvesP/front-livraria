@@ -14,11 +14,13 @@ export const LivrosDoados = () => {
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
           <ListBook
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
         </div>
       </section>
@@ -30,11 +32,13 @@ export const LivrosDoados = () => {
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
           <ListBook
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
         </div>
       </section>
@@ -46,11 +50,13 @@ export const LivrosDoados = () => {
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
           <ListBook
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
         </div>
       </section>
@@ -62,11 +68,13 @@ export const LivrosDoados = () => {
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
           <ListBook
             image={BookCover}
             name="O protagonista"
             autor="Susanne Andrade"
+            alt="Capa do livro O protagonista"
           />
         </div>
       </section>

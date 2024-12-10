@@ -23,13 +23,14 @@
 
 .contentCard {
   @include displayFlex(column, center);
-  height: 70vh;
+  height: 80vh;
   background-color: $bg-body;
 
   h3 {
     font-size: 2rem;
     color: $secondary-color;
     padding: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
