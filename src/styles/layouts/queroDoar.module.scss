@@ -93,6 +93,10 @@
     outline: none;
     border: solid 1px $primary-color;
   }
+
+  option {
+    color: $secondary-color;
+  }
 }
 
 @include breakpoint(small) {

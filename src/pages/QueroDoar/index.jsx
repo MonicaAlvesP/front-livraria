@@ -13,7 +13,7 @@ export const QueroDoar = () => {
       <section className={s.registerSection}>
         <div className={s.formRegister}>
         <h4>Por favor, preencha o formulário as informações do Livro</h4>
-          <form>
+          <form method=''>
             <input type="text" name="titulo" id="titulo" placeholder='Título' required className={s.formInput} />
             <input type="text" name="categoria" id="categoria" placeholder='Categoria' required className={s.formInput} />
             <input type="text" name="autor" id="autor" placeholder='Autor' required className={s.formInput} />
@@ -26,7 +26,6 @@ export const QueroDoar = () => {
             >
               <option value="">Estado de Conservação</option>
               <option value="novo">Novo</option>
-              <option value="bom">Bom</option>
               <option value="usado">Usado</option>
             </select>
             <button type="submit">Doar</button>
