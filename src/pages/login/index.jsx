@@ -1,5 +1,5 @@
-import s from '../../styles/layouts/login.module.scss';
-import Bookstore from '../../assets/img/bookstore.jpg';
+import s from 'style/layouts/login.module.scss';
+import Bookstore from '@/assets/img/bookstore.jpg';
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 export const Login = () => {

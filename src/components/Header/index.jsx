@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/img/logo.png";
+import Logo from "@/assets/img/logo.png";
 import { FaSearch } from "react-icons/fa";
 
-import { Inicio } from '../../pages/Inicio';
+import { Inicio } from '@/pages/Inicio';
 // import {Login} from '../../pages/login';
-import { QueroDoar } from '../../pages/QueroDoar';
-import { LivrosDoados } from '../../pages/LivrosDoados';
+import { QueroDoar } from '@/pages/QueroDoar';
+import { LivrosDoados } from '@/pages/LivrosDoados';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import s from '../../styles/modules/header.module.scss';
+import s from 'style/modules/header.module.scss';
 import { useState } from "react";
 
 export const Header = () => {

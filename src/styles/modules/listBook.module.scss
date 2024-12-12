@@ -1,5 +1,5 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 .containerBook {
   @include displayFlex(column, center, center);
@@ -41,7 +41,8 @@
     h4 {
       font-size: 0.7rem;
     }
-}}
+  }
+}
 
 @include breakpoint(large) {
   .containerBook {

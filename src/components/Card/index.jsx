@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import s from '../../styles/modules/card.module.scss';
+import s from 'style/modules/card.module.scss';
 
 export const Card = ({ image, alt, text }) => {
   return (

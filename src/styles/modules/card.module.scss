@@ -1,5 +1,5 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 .card {
   @include displayFlex(column, center, center);
@@ -44,7 +44,6 @@
     width: 100%;
     height: 25vh;
     align-items: center;
-    
 
     img {
       height: 8vh;

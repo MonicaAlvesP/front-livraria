@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import s from '../../styles/modules/listBook.module.scss';
+import s from 'style/modules/listBook.module.scss';
 
 export const ListBook = ({ image, alt, name, autor }) => {
   return (

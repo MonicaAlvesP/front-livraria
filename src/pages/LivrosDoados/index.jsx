@@ -1,6 +1,6 @@
-import BookCover from '../../assets/img/book-cover.png';
-import { ListBook } from '../../components/ListBook';
-import s from '../../styles/layouts/livrosDoados.module.scss';
+import BookCover from '@/assets/img/book-cover.png';
+import { ListBook } from '@/components/ListBook';
+import s from 'style/layouts/livrosDoados.module.scss';
 
 export const LivrosDoados = () => {
 

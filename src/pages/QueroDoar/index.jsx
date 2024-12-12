@@ -1,4 +1,4 @@
-import s from '../../styles/layouts/queroDoar.module.scss'
+import s from 'style/layouts/queroDoar.module.scss'
 
 export const QueroDoar = () => {
   return (

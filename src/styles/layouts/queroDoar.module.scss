@@ -1,5 +1,6 @@
-@import '../abstract/variables';
-@import '../abstract/mixins';
+@use "sass:color";
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 .mainContent {
   display: flex;
@@ -32,7 +33,7 @@
   display: flex;
   justify-content: center;
   width: 40%;
-  
+
   h4 {
     font-weight: 400;
     text-align: center;
@@ -62,7 +63,7 @@
       margin-top: 1rem;
 
       &:hover {
-        background-color: darken($secondary-color, 10%);
+        background-color: color.scale($secondary-color, $lightness: -10%);
       }
     }
   }
@@ -74,16 +75,6 @@
   border: solid 1px $secondary-color;
   border-radius: 15px;
   width: 100%;
-
-
-  &::placeholder {
-    color: $secondary-color;
-  }
-
-  &:focus {
-    outline: none;
-    border: solid 1px $primary-color;
-  }
 
   &::placeholder {
     color: $secondary-color;
@@ -136,6 +127,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .congratulations {
     width: 100%;
   }

@@ -1,9 +1,9 @@
-import s from '../../styles/layouts/inicio.module.scss';
-import Community from '../../assets/img/community.png';
-import Reading from '../../assets/img/reading.png';
-import Transform from '../../assets/img/transform.png';
-import Balance from '../../assets/img/balance.png';
-import { Card } from '../../components/Card';
+import s from 'style/layouts/inicio.module.scss';
+import Community from '@/assets/img/community.png';
+import Reading from '@/assets/img/reading.png';
+import Transform from '@/assets/img/transform.png';
+import Balance from '@/assets/img/balance.png';
+import { Card } from '@/components/Card';
 
 export const Inicio = () => {
   return (

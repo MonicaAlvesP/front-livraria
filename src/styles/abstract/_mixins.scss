@@ -1,4 +1,4 @@
-@import './variables';
+@use './variables';
 
 @mixin displayFlex($direction: row, $justify: center, $align: center) {
   display: flex;
@@ -7,15 +7,12 @@
   align-items: $align;
 }
 
-
 @mixin breakpoint($size) {
-  @if $size ==small {
+  @if $size == small {
     @media (min-width: 360px) and (max-width: 576px) {
       @content;
     }
-  }
-
-  @else if $size ==large {
+  } @else if $size == large {
     @media (min-width: 768px) and (max-width: 992px) {
       @content;
     }
