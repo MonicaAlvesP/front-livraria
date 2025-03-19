@@ -12,22 +12,12 @@ export const QueroDoar = () => {
 
       <section className={s.registerSection}>
         <div className={s.formRegister}>
-        <h4>Por favor, preencha o formulário as informações do Livro</h4>
+          <h4>Por favor, preencha o formulário as informações do Livro</h4>
           <form method=''>
             <input type="text" name="titulo" id="titulo" placeholder='Título' required className={s.formInput} />
             <input type="text" name="categoria" id="categoria" placeholder='Categoria' required className={s.formInput} />
             <input type="text" name="autor" id="autor" placeholder='Autor' required className={s.formInput} />
             <input type="url" name="linkImagem" id="linkImagem" placeholder='Link da Imagem' required className={s.formInput} />
-            <select
-              name="estadoConservacao"
-              id="estadoConservacao"
-              className={s.formInput}
-              required
-            >
-              <option value="">Estado de Conservação</option>
-              <option value="novo">Novo</option>
-              <option value="usado">Usado</option>
-            </select>
             <button type="submit">Doar</button>
           </form>
         </div>
