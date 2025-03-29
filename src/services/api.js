@@ -12,13 +12,16 @@ const api = axios.create({
 
 export const sendBook = async (bookData) => {
   try {
-    const response = await api.post('/doar', bookData)
-    return response.data
+    console.log('Enviando para API:', bookData);
+    const response = await api.post('/doar', bookData);
+    console.log('Resposta da API:', response.data);
+    return response.data;
   } catch (error) {
-    console.error('Erro ao criar o livro:', error)
-    throw error
+    console.error('Erro detalhado:', error.response?.data || error.message);
+    throw error;
   }
 }
+
 export const getBooks = async () => {
   try {
     const response = await api.get('/livros-doados')

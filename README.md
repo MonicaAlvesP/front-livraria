@@ -1,35 +1,79 @@
-<h1>Desafio Final modulo Frontend 🎉</h1>
-<p>Este projeto foi desenvolvido como parte da conclusão do módulo de Frontend no curso de Fullstack da Vai na Web. Com a orientação da instrutora Fernanda Corrêa ❤, aplicamos os conceitos e tecnologias aprendidas ao longo do curso.</p>
+# Livraria Vai na Web - Desafio Final Frontend 🎉
 
-<p>A aplicação é uma biblioteca virtual desenvolvida em React, que permite aos usuários:</p>
-<ul>
-  <li>Doar livros.</li>
-  <li>Explorar os livros já doados.</li>
-  <li>Descobrir os benefícios da doação de livros.</li>
-</ul>
+Este projeto foi desenvolvido como parte da conclusão do módulo de Frontend no curso de Fullstack da Vai na Web. Com a orientação da instrutora [Fernanda Corrêa](https://www.linkedin.com/in/fernandacorr%C3%AAa/) ❤, aplicamos os conceitos e tecnologias aprendidas ao longo do curso.
 
-<h2>🚀 Tecnologias Ultilizadas</h2>
-<p>Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:</p>
-<ul>
-  <li><b>React</b>: Biblioteca JavaScript para construção de interfaces de usuário.</li>
-  <li><b>React Router DOM</b>: Gerenciamento de rotas para navegação no SPA (Single Page Application).</li>
-  <li><b>React Icons</b>: Biblioteca de ícones personalizáveis para React.</li>
-  <li><b>Sass</b>: Extensão do CSS para facilitar a escrita de estilos com funcionalidades avançadas.</li>
-</ul>
+## 📚 Sobre o Projeto
 
-## 📦 Status do Projeto
+A aplicação é uma biblioteca virtual desenvolvida em React, que permite aos usuários:
 
-Atualmente, o projeto está em desenvolvimento.
+- Doar livros através de um formulário intuitivo
+- Explorar os livros já doados com detalhes completos
+- Descobrir os benefícios da doação de livros e seu impacto social
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário
+- **React Router DOM**: Gerenciamento de rotas para navegação no SPA
+- **React Icons**: Biblioteca de ícones personalizáveis para React
+- **Sass/SCSS**: Pré-processador CSS para estilos modulares e organizados
+- **Axios**: Cliente HTTP para requisições à API
+- **Vite**: Ferramenta de build rápida para desenvolvimento moderno
+
+## 🏗️ Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+- **src/components**: Componentes reutilizáveis (Header, Footer, BookCard, Card)
+- **src/pages**: Páginas principais da aplicação (Inicio, LivrosDoados, QueroDoar, DetailsBook)
+- **src/services**: Serviços para comunicação com a API
+- **src/styles**: Arquivos SCSS com estilos globais e abstrações (mixins, variáveis)
+- **src/assets**: Imagens e outros recursos estáticos
+
+## 💻 Funcionalidades
+
+- **Página Inicial**: Apresenta a proposta da biblioteca e os benefícios da doação de livros
+- **Livros Doados**: Exibe todos os livros disponíveis na biblioteca com informações básicas
+- **Detalhes do Livro**: Mostra informações completas sobre o livro selecionado
+- **Quero Doar**: Formulário para doação de novos livros à biblioteca
+
+## 🚦 Status do Projeto
+
+O projeto está funcional com as principais features implementadas:
 
 - **Concluído**:
-  - Interface inicial com dados mockados de um livro.
-  - Estruturação visual ultilizando React e Sass.
+
+  - Interface completa com componentes React e estilização SCSS
+  - Integração com API para listar, buscar e cadastrar livros
+  - Navegação entre páginas com React Router
+  - Layout responsivo para diferentes tamanhos de tela
+
 - **Próximas Etapas**:
-  - Implementação do backend.
-  - Integração com banco de dados para persistência de dados dos livros.
+  - Implementação de autenticação de usuários
+  - Adição de filtros e busca na listagem de livros
+  - Melhorias de acessibilidade
+
+## 🛠️ Como Executar
+
+Para executar este projeto localmente, siga estes passos:
+
+```bash
+# Clone o repositório
+git clone https://github.com/MonicaAlvesP/front-livraria.git
+
+# Entre no diretório
+cd front-livraria
+
+# Instale as dependências
+npm install
+
+# Execute em modo de desenvolvimento
+npm run dev
+```
 
 <details align="left">
-  <sumary></sumary>
+  <summary>Mais Detalhes..</summary>
     <p>Projeto criado como parte de um desafio proposto pela<img src="./src/assets/img/logo-vainaweb.png" width="50" align="center" />.</p>
   <div align="right">
     Feito com 💜 por <a href="https://github.com/MonicaAlvesP?tab=repositories">MA</a>
