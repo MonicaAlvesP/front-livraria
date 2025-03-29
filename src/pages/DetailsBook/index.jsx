@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBookById } from "@/services/api";
-import Book from "@/assets/img/generic-book.png";
 import s from "./detailsBook.module.scss";
 
 export const DetailsBook = () => {
