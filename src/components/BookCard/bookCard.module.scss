@@ -1,0 +1,75 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+.bookCard {
+  background-color: $bg-card;
+  border-radius: $borderRadius;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  width: 25vw;
+  height: 50vh;
+
+  h4 {
+    color: $secondary-color;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  span {
+    font-size: 12px;
+  }
+}
+
+.bookCover {
+  width: 35%;
+  height: 25vh;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100%;
+}
+
+.synopsisButton {
+  background: $secondary-color;
+  color: $bg-card;
+  border: none;
+  border-radius: $borderRadius;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $primary-color;
+    color: $bg-card;
+  }
+}
+
+@include breakpoint(small) {
+  .bookCard {
+    width: 90vw;
+    height: auto;
+    padding: 10px;
+    gap: 15px;
+  }
+}
+
+@include breakpoint(large) {
+  .bookCard {
+    width: 70vw;
+    height: auto;
+    padding: 15px;
+    gap: 20px;
+  }
+}

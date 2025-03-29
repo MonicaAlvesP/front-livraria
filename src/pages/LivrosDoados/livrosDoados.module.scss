@@ -1,0 +1,41 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: $bg-body;
+  padding: 20px;
+  gap: 20px;
+}
+
+.list {
+  border: solid $primary-color;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@include breakpoint(small) {
+  .mainContent {
+    width: 100%;
+  }
+
+  .list {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include breakpoint(large) {
+  .mainContent {
+    width: 100%;
+  }
+}

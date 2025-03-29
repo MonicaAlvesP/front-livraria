@@ -8,8 +8,9 @@ import { QueroDoar } from '@/pages/QueroDoar';
 import { LivrosDoados } from '@/pages/LivrosDoados';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import s from 'style/modules/header.module.scss';
+import s from './header.module.scss';
 import { useState } from "react";
+import { DetailsBook } from "../../pages/DetailsBook";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -51,6 +52,7 @@ export const Header = () => {
         <Route path="/" element={<Inicio />} />
         <Route path="/queroDoar" element={<QueroDoar />} />
         <Route path="/livrosDoados" element={<LivrosDoados />} />
+        <Route path="/detalhesLivro/:id" element={<DetailsBook />} />
       </Routes>
     </BrowserRouter>
   );

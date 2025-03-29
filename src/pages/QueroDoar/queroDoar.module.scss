@@ -1,6 +1,6 @@
 @use "sass:color";
-@use '../abstract/variables' as *;
-@use '../abstract/mixins' as *;
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
 
 .mainContent {
   display: flex;

@@ -1,6 +1,39 @@
-import s from 'style/layouts/queroDoar.module.scss'
+import s from './queroDoar.module.scss';
+import { useState } from 'react';
+import { sendBook } from '@/services/api';
 
 export const QueroDoar = () => {
+  const [titulo, setTitulo] = useState('');
+  const [categoria, setCategoria] = useState('');
+  const [autor, setAutor] = useState('');
+  const [linkImagem, setLinkImagem] = useState('');
+  const [anoLancamento, setAnoLancamento] = useState('');
+  const [sinopse, setSinopse] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const bookData = {
+      title: titulo,
+      category: categoria,
+      author: autor,
+      image: linkImagem,
+      releaseYear: anoLancamento,
+      synopsis: sinopse,
+    };
+
+    try {
+      await sendBook(bookData);
+      alert('Livro doado com sucesso!');
+      setTitulo('');
+      setCategoria('');
+      setAutor('');
+      setLinkImagem('');
+    } catch (error) {
+      console.error('Error donating book:', error);
+      alert('Erro ao doar o livro. Tente novamente.');
+    }
+  };
+
   return (
     <main className={s.mainContent}>
       <section className={s.congratulations}>
@@ -13,15 +46,66 @@ export const QueroDoar = () => {
       <section className={s.registerSection}>
         <div className={s.formRegister}>
           <h4>Por favor, preencha o formulário as informações do Livro</h4>
-          <form method=''>
-            <input type="text" name="titulo" id="titulo" placeholder='Título' required className={s.formInput} />
-            <input type="text" name="categoria" id="categoria" placeholder='Categoria' required className={s.formInput} />
-            <input type="text" name="autor" id="autor" placeholder='Autor' required className={s.formInput} />
-            <input type="url" name="linkImagem" id="linkImagem" placeholder='Link da Imagem' required className={s.formInput} />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Título"
+              required
+              className={s.formInput}
+              value={titulo}
+              onChange={(e) => setTitulo(e.target.value)}
+            />
+
+            <input
+              type="number"
+              placeholder="Ano de Lançamento"
+              required
+              className={s.formInput}
+              value={anoLancamento}
+              onChange={(e) => setAnoLancamento(e.target.value)}
+            />
+
+            <input
+              type="text"
+              placeholder="Categoria"
+              required
+              className={s.formInput}
+              value={categoria}
+              onChange={(e) => setCategoria(e.target.value)}
+            />
+
+            <input
+              type="text"
+              placeholder="Autor"
+              required
+              className={s.formInput}
+              value={autor}
+              onChange={(e) => setAutor(e.target.value)}
+            />
+
+            <input
+              type="url"
+              placeholder="Link da Imagem"
+              required
+              className={s.formInput}
+              value={linkImagem}
+              onChange={(e) => setLinkImagem(e.target.value)}
+            />
+
+            <input
+              type="text"
+              placeholder="Sinopse"
+              required
+              className={s.formInput}
+              value={sinopse}
+              onChange={(e) => setSinopse(e.target.value)}
+            />
+
+
             <button type="submit">Doar</button>
           </form>
         </div>
       </section>
     </main>
-  )
-}
+  );
+};
