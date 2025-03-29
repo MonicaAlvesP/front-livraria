@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import s from "./bookCard.module.scss";
-import Book from "@/assets/img/generic-book.png";
 
 export const BookCard = ({ book, onSynopsisClick }) => {
   return (
