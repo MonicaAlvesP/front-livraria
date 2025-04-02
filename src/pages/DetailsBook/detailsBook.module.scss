@@ -8,10 +8,6 @@
   padding: 1rem;
   gap: 1rem;
   background-color: $bg-body;
-
-  h1 {
-    color: $secondary-color;
-  }
 }
 
 .bookDetails {
@@ -21,9 +17,16 @@
   justify-content: space-evenly;
   align-items: center;
   width: 30%;
-  
+
   img {
     width: 35vh;
+  }
+
+  h1 {
+    font-size: 12px;
+    color: $secondary-color;
+    text-align: center;
+    padding: 0.5rem;
   }
 }
 
@@ -40,7 +43,7 @@
   .mainContent {
     flex-direction: column;
     height: auto;
-    
+
     h1 {
       margin: 1rem;
     }
@@ -49,7 +52,7 @@
   .bookDetails {
     width: 100%;
     margin-bottom: 1rem;
-    
+
     img {
       width: 30vh;
       height: auto;
@@ -63,11 +66,29 @@
   }
 }
 
+.backButton {
+  border: none;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  width: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $secondary-color;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $secondary-color;
+    color: $bg-body;
+  }
+}
+
 @include breakpoint(large) {
   .mainContent {
     flex-direction: row;
     height: 80vh;
-    
+
     h1 {
       margin: 0;
     }
@@ -75,7 +96,7 @@
 
   .bookDetails {
     width: 35%;
-    
+
     img {
       height: 30vh;
       width: 80%;
