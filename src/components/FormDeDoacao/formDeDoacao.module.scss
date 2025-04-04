@@ -1,0 +1,82 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+.formRegister {
+  background-color: $bg-card;
+  padding: 1rem;
+  border-radius: 15px;
+
+  h4 {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.formInput {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  border: solid 1px $secondary-color;
+  border-radius: 15px;
+  width: 100%;
+
+  &::placeholder {
+    color: $secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+    border: solid 1px $primary-color;
+  }
+
+  option {
+    color: $secondary-color;
+  }
+}
+
+@include breakpoint(small) {
+  .formRegister {
+    height: 50vh;
+    width: 90%;
+  }
+}
+
+.buttonSubmit {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: $secondary-color;
+  color: $text-color;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: scale-color($secondary-color, $lightness: -10%);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+
+    &:hover {
+      background-color: #cccccc;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .formRegister {
+    width: 90%;
+  }
+}

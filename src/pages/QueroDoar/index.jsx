@@ -1,46 +1,8 @@
 import s from './queroDoar.module.scss';
-import { useState } from 'react';
-import { sendBook } from '@/services/api';
+import { FormularioDeDoacao } from '../../components/FormDeDoacao';
 
 export const QueroDoar = () => {
-  const [titulo, setTitulo] = useState('');
-  const [categoria, setCategoria] = useState('');
-  const [autor, setAutor] = useState('');
-  const [image_url, setImage_url] = useState('');
-  const [anoLancamento, setAnoLancamento] = useState('');
-  const [sinopse, setSinopse] = useState('');
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const bookData = {
-      titulo,
-      ano_lancamento: parseInt(anoLancamento),
-      categoria,
-      autor,
-      imagem_url: image_url,
-      sinopse,
-    };
-
-    try {
-      console.log('Enviando dados para API:', bookData);
-      await sendBook(bookData);
-      alert('Livro doado com sucesso!');
-      setTitulo('');
-      setAnoLancamento('');
-      setCategoria('');
-      setAutor('');
-      setImage_url('');
-      setSinopse('');
-    } catch (error) {
-      console.error('Error donating book:', error);
-      alert(`Erro ao doar o livro: ${error.response?.data?.error || error.message}`);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <main className={s.mainContent}>
@@ -66,68 +28,7 @@ export const QueroDoar = () => {
       </section>
 
       <section className={s.registerSection}>
-        <div className={s.formRegister}>
-          <h4>Por favor, preencha o formulário as informações do Livro</h4>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Título"
-              required
-              className={s.formInput}
-              value={titulo}
-              onChange={(e) => setTitulo(e.target.value)}
-            />
-
-            <input
-              type="number"
-              placeholder="Ano de Lançamento"
-              required
-              className={s.formInput}
-              value={anoLancamento}
-              onChange={(e) => setAnoLancamento(e.target.value)}
-            />
-
-            <input
-              type="text"
-              placeholder="Categoria"
-              required
-              className={s.formInput}
-              value={categoria}
-              onChange={(e) => setCategoria(e.target.value)}
-            />
-
-            <input
-              type="text"
-              placeholder="Autor"
-              required
-              className={s.formInput}
-              value={autor}
-              onChange={(e) => setAutor(e.target.value)}
-            />
-
-            <input
-              type="url"
-              placeholder="Link da Imagem"
-              required
-              className={s.formInput}
-              value={image_url}
-              onChange={(e) => setImage_url(e.target.value)}
-            />
-
-            <input
-              type="text"
-              placeholder="Sinopse"
-              required
-              className={s.formInput}
-              value={sinopse}
-              onChange={(e) => setSinopse(e.target.value)}
-            />
-
-            <button type="submit" disabled={loading}>
-              {loading ? 'Enviando...' : 'Doar'}
-            </button>
-          </form>
-        </div>
+        <FormularioDeDoacao />
       </section>
     </main>
   );
