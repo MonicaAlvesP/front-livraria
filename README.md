@@ -1,8 +1,8 @@
-# Livraria Vai na Web - Desafio Final Frontend 🎉
+# Livraria Vai na Web - Desafio Final Frontend
 
-Este projeto foi desenvolvido como parte da conclusão do módulo de Frontend no curso de Fullstack da Vai na Web. Com a orientação da instrutora [Fernanda Corrêa](https://www.linkedin.com/in/fernandacorr%C3%AAa/) ❤, aplicamos os conceitos e tecnologias aprendidas ao longo do curso.
+Este projeto foi desenvolvido como parte da conclusão do módulo de Frontend no curso de Fullstack da Vai na Web. Com a orientação da instrutora [Fernanda Corrêa](https://www.linkedin.com/in/fernandacorr%C3%AAa/), aplicamos os conceitos e tecnologias aprendidas ao longo do curso.
 
-## 📚 Sobre o Projeto
+## Sobre o Projeto
 
 A aplicação é uma biblioteca virtual desenvolvida em React, que permite aos usuários:
 
@@ -10,7 +10,7 @@ A aplicação é uma biblioteca virtual desenvolvida em React, que permite aos u
 - Explorar os livros já doados com detalhes completos
 - Descobrir os benefícios da doação de livros e seu impacto social
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 
@@ -21,7 +21,7 @@ Este projeto foi construído utilizando as seguintes tecnologias e ferramentas:
 - **Axios**: Cliente HTTP para requisições à API
 - **Vite**: Ferramenta de build rápida para desenvolvimento moderno
 
-## 🏗️ Estrutura do Projeto
+## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
 
@@ -31,14 +31,17 @@ O projeto está organizado da seguinte forma:
 - **src/styles**: Arquivos SCSS com estilos globais e abstrações (mixins, variáveis)
 - **src/assets**: Imagens e outros recursos estáticos
 
-## 💻 Funcionalidades
+## Funcionalidades Implementadas
 
+- **Header e Navegação**: Sistema de navegação responsivo com menu hambúrguer para dispositivos móveis
 - **Página Inicial**: Apresenta a proposta da biblioteca e os benefícios da doação de livros
-- **Livros Doados**: Exibe todos os livros disponíveis na biblioteca com informações básicas
-- **Detalhes do Livro**: Mostra informações completas sobre o livro selecionado
-- **Quero Doar**: Formulário para doação de novos livros à biblioteca
+- **Listagem de Livros**: Exibe os livros doados em cards com informações básicas
+- **Detalhes do Livro**: Página dedicada com informações completas sobre cada livro
+- **Formulário de Doação**: Interface para cadastro de novos livros com validações
+- **Loading States**: Skeletons para melhorar a experiência durante o carregamento de dados
+- **Design Responsivo**: Layouts adaptados para diferentes tamanhos de tela
 
-## 🚦 Status do Projeto
+## Status do Projeto
 
 O projeto está funcional com as principais features implementadas:
 
@@ -53,8 +56,9 @@ O projeto está funcional com as principais features implementadas:
   - Implementação de autenticação de usuários
   - Adição de filtros e busca na listagem de livros
   - Melhorias de acessibilidade
+  - Barra de pesquisa na interface (apenas visual)
 
-## 🛠️ Como Executar
+## Como Executar
 
 Para executar este projeto localmente, siga estes passos:
 
