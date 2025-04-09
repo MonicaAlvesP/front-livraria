@@ -11,38 +11,17 @@ const api = axios.create({
 })
 
 export const sendBook = async (bookData) => {
-  try {
-    console.log('Enviando para API:', bookData);
-    const response = await api.post('/doar', bookData);
-    console.log('Resposta da API:', response.data);
-    return response.data;
-  } catch (error) {
-    console.error('Erro detalhado:', error.response?.data || error.message);
-    throw error;
-  }
+  const response = await api.post('/doar', bookData);
+  return response.data;
 }
 
 export const getBooks = async () => {
-  try {
-    const response = await api.get('/livros-doados')
-    return response.data
-  } catch (error) {
-    console.error('Erro ao consultar os livros:', error)
-    throw error
-  }
+  const response = await api.get('/livros-doados');
+  return response.data;
 }
 
 export const getBookById = async (id) => {
-  try {
-    const parsedId = parseInt(id);
-    const response = await api.get(`/livros-doados/${parsedId}`);
-    if (response.status === 200) {
-      return response.data;
-    } else {
-      throw new Error(`Erro ao buscar livro: ${response.statusText}`);
-    }
-  } catch (error) {
-    console.error(`Erro ao buscar livro com ID ${id}:`, error);
-    throw error;
-  }
+  const parsedId = parseInt(id);
+  const response = await api.get(`/livros-doados/${parsedId}`);
+  return response.data;
 };

@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { getBookById } from "@/services/api";
-import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import s from "./detailsBook.module.scss";
 
@@ -22,7 +21,7 @@ export const DetailsBook = () => {
         }
         setBook(data);
       } catch (err) {
-        setError("Não foi possível carregar os detalhes do livro.");
+        setError("Desculpe, não conseguimos carregar os detalhes do livro no momento. Por favor, tente novamente mais tarde.");
       } finally {
         setLoading(false);
       }
@@ -32,7 +31,7 @@ export const DetailsBook = () => {
   }, [id]);
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return <p>Carregando os detalhes do livro, por favor, aguarde...</p>;
   }
 
   if (error) {
@@ -40,7 +39,7 @@ export const DetailsBook = () => {
   }
 
   if (!book) {
-    return <p>Livro não encontrado.</p>;
+    return <p>Não conseguimos encontrar o livro solicitado. Por favor, verifique o ID e tente novamente.</p>;
   }
 
   const handleBackButtonClick = () => {

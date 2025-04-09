@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Logo from "@/assets/img/logo.png";
 import { FaSearch } from "react-icons/fa";
 
 import { Inicio } from '@/pages/Inicio';
-// import {Login} from '../../pages/login';
 import { QueroDoar } from '@/pages/QueroDoar';
 import { LivrosDoados } from '@/pages/LivrosDoados';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { DetailsBook } from "../../pages/DetailsBook";
 
 import s from './header.module.scss';
-import { useState } from "react";
-import { DetailsBook } from "../../pages/DetailsBook";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

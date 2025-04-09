@@ -22,6 +22,14 @@
   gap: 20px;
 }
 
+.noBooks {
+  text-align: center;
+  color: $secondary-color;
+  font-size: 1.2rem;
+  padding: 2rem;
+  width: 100%;
+}
+
 @include breakpoint(small) {
   .mainContent {
     width: 100%;

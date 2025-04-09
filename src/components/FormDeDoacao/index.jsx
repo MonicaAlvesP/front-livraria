@@ -31,9 +31,8 @@ export const FormularioDeDoacao = () => {
     };
 
     try {
-      console.log('Enviando dados para API:', bookData)
       await sendBook(bookData)
-      alert('Livro doado com sucesso!')
+      alert('Obrigado por sua doação! O livro foi registrado com sucesso.')
       setTitulo('')
       setAnoLancamento('')
       setCategoria('')
@@ -41,7 +40,7 @@ export const FormularioDeDoacao = () => {
       setImage_url('')
       setSinopse('')
     } catch (error) {
-      alert(`Erro ao doar o livro: ${error.response?.data?.error || error.message}`)
+      alert(`Ops! Algo deu errado ao registrar sua doação. Por favor, tente novamente mais tarde.`)
     }
   };
 
