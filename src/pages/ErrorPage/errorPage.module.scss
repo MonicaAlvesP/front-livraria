@@ -1,0 +1,63 @@
+@use '../../styles/abstract/variables' as *;
+@use '../../styles/abstract/mixins' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: $link-hover;
+}
+
+.imageError {
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.titleError {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@include breakpoint(small) {
+    .imageError {
+        height: 50vh;
+        width: 80vw;
+    }
+
+    .textError {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $secondary-color;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+@include breakpoint(large) {
+    .imageError {
+        height: 50vh;
+        width: 80vw;
+    }
+
+    .textError {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $secondary-color;
+        text-align: center;
+        padding: 0 20px;
+    }
+}

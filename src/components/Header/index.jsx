@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Logo from "@/assets/img/logo.png";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 
 import { Inicio } from '@/pages/Inicio';
 import { QueroDoar } from '@/pages/QueroDoar';
 import { LivrosDoados } from '@/pages/LivrosDoados';
-import { DetailsBook } from "../../pages/DetailsBook";
+import { DetailsBook } from "@/pages/DetailsBook";
+import { ErrorPage } from "@/pages/ErrorPage";
 
 import s from './header.module.scss';
 
@@ -51,6 +52,7 @@ export const Header = () => {
         <Route path="/queroDoar" element={<QueroDoar />} />
         <Route path="/livrosDoados" element={<LivrosDoados />} />
         <Route path="/detalhesLivro/:id" element={<DetailsBook />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
