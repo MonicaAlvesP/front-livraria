@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../../styles/abstract/variables' as *;
 @use '../../styles/abstract/mixins' as *;
 
@@ -59,7 +60,7 @@
   margin-top: 1rem;
 
   &:hover {
-    background-color: scale-color($secondary-color, $lightness: -10%);
+    background-color: color.scale($secondary-color, $lightness: -10%);
   }
 
   &:disabled {

@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../../styles/abstract/variables' as *;
 @use '../../styles/abstract/mixins' as *;
 
@@ -16,7 +17,7 @@
 }
 
 .card {
-  background-color: lighten($bg-card, 5%);
+  background-color: color.adjust($bg-card, $lightness: 5%);
   border-radius: $borderRadius;
   display: flex;
   flex-direction: column;
@@ -32,7 +33,7 @@
 .cover {
   width: 35%;
   height: 25vh;
-  background-color: darken($bg-card, 10%);
+  background-color: color.adjust($bg-card, $lightness: -10%);
   border-radius: 8px;
 }
 
@@ -49,7 +50,7 @@
 .author,
 .year,
 .buttonViewDetails {
-  background-color: darken($bg-card, 10%);
+  background-color: color.adjust($bg-card, $lightness: -10%);
   border-radius: 4px;
 }
 
