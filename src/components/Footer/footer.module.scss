@@ -36,23 +36,11 @@ footer {
   height: 6vh;
   background-color: $bg-black;
   color: $text-muted;
-}
 
-@include breakpoint(small) {
-  .socialIcons {
-    height: 8vh;
-  }
-
-  .icons {
-    width: 40%;
-  }
-
-  .license {
-    height: 5vh;
-
-    p {
-      font-size: 0.6rem;
-    }
+  p {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.4;
   }
 }
 

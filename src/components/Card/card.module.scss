@@ -7,48 +7,36 @@
   box-shadow: $box-shadow;
   background-color: $bg-card;
   width: 100%;
-  height: 40vh;
+  padding: 2rem 1.5rem;
+  min-height: 250px;
+  text-align: center;
 
   img {
-    height: 10vh;
+    height: auto;
+    max-height: 70px;
     filter: brightness(0) invert(1);
+    margin-bottom: 1.5rem;
   }
 
   p {
-    width: 75%;
-    height: 15vh;
-    margin-top: 1rem;
+    width: 100%;
+    line-height: 1.5;
+    color: $text-muted;
   }
 }
 
 @include breakpoint(small) {
   .card {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    width: 75%;
-    height: 35vh;
-    padding: 1rem;
-
+    padding: 1.5rem;
+    min-height: 200px;
+    
     img {
-      height: 15vh;
+      max-height: 60px;
+      margin-bottom: 1rem;
     }
-
+    
     p {
-      width: 100%;
-      height: 10vh;
-    }
-  }
-}
-
-@include breakpoint(large) {
-  .card {
-    width: 100%;
-    height: 25vh;
-    align-items: center;
-
-    img {
-      height: 8vh;
-      margin-top: 3rem;
+      font-size: 0.95rem;
     }
   }
 }

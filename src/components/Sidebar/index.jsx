@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { FaHome, FaBookOpen, FaHandHoldingHeart, FaSearch, FaBars } from 'react-icons/fa';
+import { FaHome, FaBookOpen, FaHandHoldingHeart, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import s from './sidebar.module.scss';
 import Logo from '@/assets/img/logo.png';
 
@@ -19,8 +19,8 @@ export const Sidebar = () => {
 
   return (
     <>
-      <button className={s.mobileToggle} onClick={() => setIsOpen(!isOpen)}>
-        <FaBars />
+      <button className={`${s.mobileToggle} ${isOpen ? s.toggleOpen : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FaTimes /> : <FaBars />}
       </button>
       
       <aside className={`${s.sidebar} ${isOpen ? s.open : ''}`}>

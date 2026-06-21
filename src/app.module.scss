@@ -1,6 +1,8 @@
 .appContainer {
   display: flex;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .mainContent {
@@ -9,8 +11,10 @@
   display: flex;
   flex-direction: column;
   transition: margin-left 0.3s ease;
+  min-width: 0;
   
   @media (max-width: 768px) {
     margin-left: 0;
+    width: 100%;
   }
 }
