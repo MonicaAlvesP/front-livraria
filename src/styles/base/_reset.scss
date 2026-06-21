@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+@use '../abstract/variables' as v;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -14,5 +14,24 @@ html {
 }
 
 body {
-  font-family: "Inter", serif;
+  font-family: "Inter", sans-serif;
+  background-color: v.$bg-body;
+  color: v.$text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: v.$bg-body; 
+}
+::-webkit-scrollbar-thumb {
+  background: v.$border-color; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: v.$text-muted; 
 }

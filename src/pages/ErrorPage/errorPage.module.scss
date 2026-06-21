@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     height: 80vh;
-    background: $link-hover;
+    background: $bg-body;
 }
 
 .imageError {
@@ -27,7 +27,8 @@
 .titleError {
     font-size: 2.5rem;
     font-weight: 700;
-    color: $secondary-color;
+    color: $primary-color;
+    font-family: 'Outfit', sans-serif;
     text-align: center;
     margin-top: 20px;
 }
@@ -41,7 +42,7 @@
     .textError {
         font-size: 1.2rem;
         font-weight: 700;
-        color: $secondary-color;
+        color: $primary-color;
         text-align: center;
         padding: 0 20px;
     }
@@ -56,7 +57,7 @@
     .textError {
         font-size: 1.2rem;
         font-weight: 700;
-        color: $secondary-color;
+        color: $primary-color;
         text-align: center;
         padding: 0 20px;
     }

@@ -1,13 +1,16 @@
-$primary-color: linear-gradient(90deg, #001B2F 0%, #005695 100%);
-$secondary-color: #005695;
+$primary-color: #3A82F6; // Modern blue
+$primary-hover: #60a5fa;
+$bg-black: #0f172a; // Slate 900
+$bg-sidebar: #1e293b; // Slate 800
+$bg-card: #1e293b;
+$bg-body: #0f172a;
+$text-color: #f8fafc; // Slate 50
+$text-muted: #94a3b8; // Slate 400
+$border-color: #334155; // Slate 700
 
-$box-shadow: 0 0 10px $secondary-color;
-$shadow-botton: 0 8px 10px -8px $secondary-color;
-$borderRadius: 20px;
+$box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+$shadow-glow: 0 0 15px rgba(59, 130, 246, 0.3);
+$borderRadius: 12px;
 
-$bg-black: #000000;
-$bg-card: #B3CDDF;
-$bg-body: #f0f8ff;
-
-$text-color: #ffffff;
-$link-hover: #B8F7FE;
+$link-hover: #60a5fa;
+$transition-speed: 0.3s;

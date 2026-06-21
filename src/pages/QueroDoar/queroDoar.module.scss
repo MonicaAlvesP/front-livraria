@@ -4,54 +4,64 @@
 
 .mainContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 4rem;
   width: 100%;
-  height: 75vh;
+  min-height: 100vh;
   background-color: $bg-body;
+  padding: 4rem;
 }
 
 .congratulations {
   width: 45%;
+  max-width: 600px;
   padding: 2rem;
 
   h1 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: $text-color;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
-    color: $secondary-color;
-    line-height: 1.5;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+
+    b {
+      color: $primary-color;
+    }
   }
 }
 
 .registerSection {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 45%;
+  max-width: 500px;
 }
 
 @include breakpoint(small) {
   .mainContent {
     flex-direction: column;
-    height: 100%;
-    margin-bottom: 1rem;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
   }
 
   .congratulations {
     width: 100%;
 
     h1 {
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.8rem;
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 
@@ -62,19 +72,16 @@
 
 @include breakpoint(large) {
   .mainContent {
-    height: 80vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 3rem;
   }
 
   .congratulations {
     width: 100%;
+    text-align: center;
   }
 
   .registerSection {
-    justify-content: center;
-    align-items: center;
     width: 80%;
   }
 }

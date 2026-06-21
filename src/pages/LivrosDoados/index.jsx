@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { getBooks } from "@/services/api";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { getBooks, searchBooks } from "@/services/api";
 import { BookCard } from "@/components/BookCard";
 import { BookCardSkeleton } from "@/components/BookCardSkeleton";
 import s from "./livrosDoados.module.scss";
@@ -9,20 +9,27 @@ export const LivrosDoados = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('q');
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
         setLoading(true);
-        const data = await getBooks();
-        setBooks(data);
+        if (query) {
+          const data = await searchBooks(query);
+          setBooks(data);
+        } else {
+          const data = await getBooks();
+          setBooks(data);
+        }
       } finally {
         setLoading(false);
       }
     };
 
     fetchBooks();
-  }, []);
+  }, [query]);
 
   const goToSynopsis = (id) => {
     navigate(`/detalhesLivro/${id}`);
@@ -30,10 +37,13 @@ export const LivrosDoados = () => {
 
   return (
     <main className={s.mainContent}>
-      <h1>Livros Doados</h1>
+      <div className={s.header}>
+        <h1>{query ? `Resultados para "${query}"` : 'Livros Doados'}</h1>
+        {query && <p className={s.subtitle}>{books.length} livro(s) encontrado(s)</p>}
+      </div>
       <section className={s.list}>
         {loading ? (
-          Array.from({ length: 3 }).map((_, index) => (
+          Array.from({ length: 4 }).map((_, index) => (
             <BookCardSkeleton key={index} />
           ))
         ) : books.length > 0 ? (
@@ -41,9 +51,10 @@ export const LivrosDoados = () => {
             <BookCard key={book.id} book={book} onSynopsisClick={goToSynopsis} />
           ))
         ) : (
-          <p className={s.noBooks}>Parece que ainda não temos livros doados. Que tal ser o primeiro a doar?</p>
+          <p className={s.noBooks}>Nenhum livro encontrado para exibir.</p>
         )}
       </section>
     </main>
   );
 };
+

@@ -25,3 +25,19 @@ export const getBookById = async (id) => {
   const response = await api.get(`/livros-doados/${parsedId}`);
   return response.data;
 };
+
+export const searchBooks = async (query) => {
+  try {
+    const response = await api.get(`/pesquisa?q=${encodeURIComponent(query)}`);
+    return response.data;
+  } catch (error) {
+    // Caso o backend não tenha a rota /pesquisa, faz o filtro no frontend
+    const allBooks = await getBooks();
+    const q = query.toLowerCase();
+    return allBooks.filter(book => 
+      book.titulo.toLowerCase().includes(q) || 
+      book.autor.toLowerCase().includes(q) || 
+      book.categoria.toLowerCase().includes(q)
+    );
+  }
+};
